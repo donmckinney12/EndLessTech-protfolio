@@ -1,8 +1,8 @@
 "use client";
 
 import { useAuth, SignInButton } from "@clerk/nextjs";
-import { Lock, ShieldAlert, EyeOff } from "lucide-react";
-import { LayoutShell } from "./layout-shell";
+import { Lock, ShieldAlert, EyeOff, AlertCircle, Terminal, Cpu } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect } from "react";
 
 interface SecurityGateProps {
