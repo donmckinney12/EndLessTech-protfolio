@@ -3,5 +3,6 @@
   # since they are intended to be public in Next.js.
   SECRETS_SCAN_OMIT_KEYS = "NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY,NEXT_PUBLIC_NEW_RELIC_LICENSE_KEY"
   
-  # Explicitly set the Clerk JS URL to resolve the malformed CDN URL issue
-  NEXT_PUBLIC_CLERK_JS_URL = "https://cdn.clerk.com/clerk.js"
+  # Explicitly set the Clerk JS and UI URLs to resolve the malformed CDN URL issue
+  NEXT_PUBLIC_CLERK_JS_URL = "https://unpkg.com/@clerk/clerk-js@latest/dist/clerk.browser.js"
+  NEXT_PUBLIC_CLERK_UI_URL = "https://unpkg.com/@clerk/ui@latest/dist/ui.browser.js"
