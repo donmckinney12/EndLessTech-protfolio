@@ -1,6 +1,6 @@
 "use client";
 
-import { Shield, Globe, Code, Briefcase, Mail, ExternalLink, Cpu, Zap, Radio, ChevronUp } from "lucide-react";
+import { Shield, Globe, Code, Briefcase, Mail, ExternalLink, Cpu, Zap, Radio, ChevronUp, Twitter, Linkedin, Github } from "lucide-react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import Image from "next/image";
@@ -33,7 +33,7 @@ export function Footer() {
               Engineering the future of autonomous SaaS ecosystems. Architecting high-fidelity assets for strategic acquisition.
             </p>
             <div className="flex gap-4">
-              {[Globe, Code, Briefcase, Mail].map((Icon, i) => (
+              {[Twitter, Linkedin, Github, Mail].map((Icon, i) => (
                 <motion.button 
                   key={i} 
                   whileHover={{ y: -3, scale: 1.1 }}
