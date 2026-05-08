@@ -57,8 +57,8 @@ export default function RootLayout({
   return (
     <ClerkProvider
       publishableKey={process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY}
-      // @ts-ignore - Forcing URL to resolve malformed CDN issue in production
-      clerkJSUrl="https://cdn.clerk.com/clerk.js"
+      // @ts-ignore - Using alternative CDN to bypass DNS resolution issues with cdn.clerk.com
+      clerkJSUrl="https://unpkg.com/@clerk/clerk-js@latest/dist/clerk.browser.js"
       appearance={{
         variables: { colorPrimary: "#22d3ee" },
         elements: {
