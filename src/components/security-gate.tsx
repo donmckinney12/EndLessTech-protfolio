@@ -30,6 +30,7 @@ export function SecurityGate({
 
   // Show a high-fidelity loading state if Clerk isn't loaded yet
   if (!isLoaded) {
+    const hasKey = typeof window !== "undefined" && !!process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY;
     return (
       <div className="min-h-[60vh] flex flex-col items-center justify-center">
         <div className="relative w-16 h-16 mb-8">
@@ -39,6 +40,9 @@ export function SecurityGate({
         <div className="text-center">
           <p className="text-[10px] font-mono text-cyan-400 uppercase tracking-[0.3em] animate-pulse">Establishing Secure Uplink</p>
           <p className="text-slate-500 text-[9px] mt-2 font-mono uppercase tracking-wider">Verifying Institutional Identity...</p>
+          <p className="text-slate-700 text-[8px] mt-4 font-mono uppercase">
+            Uplink Key Status: {hasKey ? "DETECTED" : "MISSING"}
+          </p>
         </div>
       </div>
     );
