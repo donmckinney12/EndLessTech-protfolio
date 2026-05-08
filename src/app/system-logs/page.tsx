@@ -29,12 +29,12 @@ export default function SystemLogsPage() {
   }, []);
 
   return (
-    <SecurityGate
-      title="Log Access Restricted"
-      description="System logs contain sensitive infrastructure events and are restricted to authenticated users."
-      icon="eye"
-    >
-      <LayoutShell>
+    <LayoutShell>
+      <SecurityGate
+        title="Log Access Restricted"
+        description="System logs contain sensitive infrastructure events and are restricted to authenticated users."
+        icon="eye"
+      >
         <div className="relative min-h-screen bg-slate-950 font-mono">
           <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center opacity-10" />
           
@@ -89,7 +89,7 @@ export default function SystemLogsPage() {
             </div>
           </div>
         </div>
-      </LayoutShell>
-    </SecurityGate>
+      </SecurityGate>
+    </LayoutShell>
   );
 }

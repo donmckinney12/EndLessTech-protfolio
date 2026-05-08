@@ -93,11 +93,11 @@ export default function CommandCenterPage() {
   ];
 
   return (
-    <SecurityGate 
-      title="System Access Required"
-      description="The Command Center is restricted to authenticated users with high-level system clearance."
-    >
-      <LayoutShell>
+    <LayoutShell>
+      <SecurityGate 
+        title="System Access Required"
+        description="The Command Center is restricted to authenticated users with high-level system clearance."
+      >
       <div className="relative min-h-screen bg-slate-950 overflow-hidden font-sans">
         {/* Extreme Background Visuals */}
         <div className="absolute inset-0 mesh-gradient opacity-30 pointer-events-none" />
@@ -416,7 +416,7 @@ export default function CommandCenterPage() {
           </div>
         </div>
       </div>
-      </LayoutShell>
-    </SecurityGate>
+      </SecurityGate>
+    </LayoutShell>
   );
 }

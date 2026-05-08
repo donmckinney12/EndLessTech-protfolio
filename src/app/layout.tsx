@@ -88,6 +88,13 @@ export default function RootLayout({
           </Script>
         </head>
         <body className="min-h-full flex flex-col bg-slate-950 text-white">
+          <Script id="clerk-check" strategy="afterInteractive">
+            {`
+              if (!"${process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY || ''}") {
+                console.warn("CRITICAL: NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY is missing. Clerk will not initialize.");
+              }
+            `}
+          </Script>
           {children}
         </body>
       </html>

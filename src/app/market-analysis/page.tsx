@@ -7,12 +7,12 @@ import { SecurityGate } from "@/components/security-gate";
 
 export default function MarketAnalysisPage() {
   return (
-    <SecurityGate
-      title="Market Data Restricted"
-      description="Proprietary SaaS acquisition intelligence and valuation tracking are restricted to authenticated users."
-      icon="lock"
-    >
-      <LayoutShell>
+    <LayoutShell>
+      <SecurityGate
+        title="Market Data Restricted"
+        description="Proprietary SaaS acquisition intelligence and valuation tracking are restricted to authenticated users."
+        icon="lock"
+      >
         <div className="relative min-h-screen overflow-hidden">
           <div className="absolute inset-0 mesh-gradient opacity-20 pointer-events-none" />
           
@@ -63,7 +63,7 @@ export default function MarketAnalysisPage() {
             </div>
           </div>
         </div>
-      </LayoutShell>
-    </SecurityGate>
+      </SecurityGate>
+    </LayoutShell>
   );
 }

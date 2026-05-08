@@ -7,12 +7,12 @@ import { SecurityGate } from "@/components/security-gate";
 
 export default function NodesPage() {
   return (
-    <SecurityGate
-      title="Node Infrastructure Restricted"
-      description="Global node distribution data is restricted to authenticated users with authorized clearance."
-      icon="lock"
-    >
-      <LayoutShell>
+    <LayoutShell>
+      <SecurityGate
+        title="Node Infrastructure Restricted"
+        description="Global node distribution data is restricted to authenticated users with authorized clearance."
+        icon="lock"
+      >
         <div className="relative min-h-screen overflow-hidden">
           <div className="absolute inset-0 mesh-gradient opacity-20 pointer-events-none" />
           
@@ -78,7 +78,7 @@ export default function NodesPage() {
             </div>
           </div>
         </div>
-      </LayoutShell>
-    </SecurityGate>
+      </SecurityGate>
+    </LayoutShell>
   );
 }

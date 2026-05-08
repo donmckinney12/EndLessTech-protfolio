@@ -27,12 +27,12 @@ export default function TelemetryPage() {
   }, []);
 
   return (
-    <SecurityGate
-      title="Telemetry Uplink Restricted"
-      description="Real-time infrastructure telemetry is restricted to authenticated users with authorized access."
-      icon="eye"
-    >
-      <LayoutShell>
+    <LayoutShell>
+      <SecurityGate
+        title="Telemetry Uplink Restricted"
+        description="Real-time infrastructure telemetry is restricted to authenticated users with authorized access."
+        icon="eye"
+      >
         <div className="relative min-h-screen overflow-hidden">
           <div className="absolute inset-0 mesh-gradient opacity-20 pointer-events-none" />
           
@@ -116,7 +116,7 @@ export default function TelemetryPage() {
             </div>
           </div>
         </div>
-      </LayoutShell>
-    </SecurityGate>
+      </SecurityGate>
+    </LayoutShell>
   );
 }

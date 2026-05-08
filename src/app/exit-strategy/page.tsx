@@ -7,12 +7,12 @@ import { SecurityGate } from "@/components/security-gate";
 
 export default function ExitStrategyPage() {
   return (
-    <SecurityGate
-      title="Exit Framework Restricted"
-      description="Proprietary acquisition frameworks and exit strategies are restricted to authenticated users."
-      icon="shield"
-    >
-      <LayoutShell>
+    <LayoutShell>
+      <SecurityGate
+        title="Exit Framework Restricted"
+        description="Proprietary acquisition frameworks and exit strategies are restricted to authenticated users."
+        icon="shield"
+      >
         <div className="relative min-h-screen overflow-hidden">
           {/* Background Mesh Gradient */}
           <div className="absolute inset-0 mesh-gradient opacity-20 pointer-events-none" />
@@ -103,7 +103,7 @@ export default function ExitStrategyPage() {
             </motion.div>
           </div>
         </div>
-      </LayoutShell>
-    </SecurityGate>
+      </SecurityGate>
+    </LayoutShell>
   );
 }

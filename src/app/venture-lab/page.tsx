@@ -8,12 +8,12 @@ import { SecurityGate } from "@/components/security-gate";
 
 export default function VentureLabPage() {
   return (
-    <SecurityGate
-      title="Venture Protocol Restricted"
-      description="The Acquisition Pipeline and synthesis protocols are restricted to authenticated users."
-      icon="lock"
-    >
-      <LayoutShell>
+    <LayoutShell>
+      <SecurityGate
+        title="Venture Protocol Restricted"
+        description="The Acquisition Pipeline and synthesis protocols are restricted to authenticated users."
+        icon="lock"
+      >
         <div className="relative min-h-screen overflow-hidden">
           {/* Background Mesh Gradient */}
           <div className="absolute inset-0 mesh-gradient opacity-20 pointer-events-none" />
@@ -103,7 +103,7 @@ export default function VentureLabPage() {
             </div>
           </div>
         </div>
-      </LayoutShell>
-    </SecurityGate>
+      </SecurityGate>
+    </LayoutShell>
   );
 }

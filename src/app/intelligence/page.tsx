@@ -18,12 +18,12 @@ export default function IntelligencePage() {
   }, [userId]);
 
   return (
-    <SecurityGate
-      title="Intelligence Access Restricted"
-      description="Detailed technical intelligence is restricted to authenticated users with authorized clearance."
-      icon="shield"
-    >
-      <LayoutShell>
+    <LayoutShell>
+      <SecurityGate
+        title="Intelligence Access Restricted"
+        description="Detailed technical intelligence is restricted to authenticated users with authorized clearance."
+        icon="shield"
+      >
         <div className="relative min-h-screen overflow-hidden">
           <div className="absolute inset-0 mesh-gradient opacity-20 pointer-events-none" />
           
@@ -78,7 +78,7 @@ export default function IntelligencePage() {
             </div>
           </div>
         </div>
-      </LayoutShell>
-    </SecurityGate>
+      </SecurityGate>
+    </LayoutShell>
   );
 }
