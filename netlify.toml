@@ -1,0 +1,4 @@
+[build.environment]
+  # Tell Netlify to ignore these keys during secrets scanning
+  # since they are intended to be public in Next.js.
+  SECRETS_SCAN_OMIT_KEYS = "NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY,NEXT_PUBLIC_NEW_RELIC_LICENSE_KEY"
